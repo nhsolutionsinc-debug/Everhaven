@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance Request - EverHaven Independent Living</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="EverHaven Solutions Logo" class="logo">
+      <h1>EverHaven Independent Living</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="intake.html">Resident Intake</a>
+      <a href="maintenance.html">Maintenance Request</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Maintenance Request</h2>
+    <p class="form-intro">Submit maintenance requests quickly and easily. Our maintenance team responds promptly to ensure your comfort and safety.</p>
+    
+    <form class="maintenance-form" action="#" method="POST">
+      <fieldset>
+        <legend>Resident Information</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="residentName">Resident Name *</label>
+            <input type="text" id="residentName" name="residentName" required>
+          </div>
+          <div class="form-group">
+            <label for="roomNumber">Room/Unit Number *</label>
+            <input type="text" id="roomNumber" name="roomNumber" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="contactPhone">Contact Phone *</label>
+          <input type="tel" id="contactPhone" name="contactPhone" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Maintenance Request Details</legend>
+        <div class="form-group">
+          <label for="priority">Priority Level *</label>
+          <select id="priority" name="priority" required>
+            <option value="">Select Priority</option>
+            <option value="emergency">Emergency (Safety/Security Issue)</option>
+            <option value="urgent">Urgent (Within 24 hours)</option>
+            <option value="routine">Routine (Within 3-5 days)</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="category">Category *</label>
+          <select id="category" name="category" required>
+            <option value="">Select Category</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="electrical">Electrical</option>
+            <option value="hvac">Heating/Air Conditioning</option>
+            <option value="appliance">Appliance</option>
+            <option value="door-window">Door/Window</option>
+            <option value="cleaning">Cleaning</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="description">Problem Description *</label>
+          <textarea id="description" name="description" rows="6" placeholder="Please describe the issue in detail, including location and any relevant information" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="accessible">Best Time to Access Unit</label>
+          <textarea id="accessible" name="accessible" rows="3" placeholder="Please let us know when you'll be available for maintenance to access your unit"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Submit Request</button>
+        <button type="reset" class="btn-secondary">Clear Form</button>
+      </div>
+    </form>
+
+    <section class="maintenance-info">
+      <h3>Emergency Contact</h3>
+      <p>For immediate emergencies (fire, flood, gas leak, no heat in winter), please call:</p>
+      <p class="emergency-number">📞 <strong>(786) 699-2617</strong></p>
+      <p class="emergency-note">For after-hours emergencies, follow the prompts for emergency maintenance.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EverHaven Solutions | Providing compassionate independent living solutions</p>
+  </footer>
+</body>
+</html>

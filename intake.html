@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resident Intake Form - EverHaven Independent Living</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header, footer {
+      background-color: #004080;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004080;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .radio-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: normal;
+    }
+    .form-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-primary {
+      background-color: #004080;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn-secondary {
+      background-color: #ccc;
+      color: #333;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .note {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="EverHaven Solutions Logo" class="logo" style="max-height:60px;">
+      <h1>EverHaven Independent Living</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="intake.html">Resident Intake</a>
+      <a href="maintenance.html">Maintenance Request</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Resident Intake Form</h2>
+    <p class="form-intro">Please complete this form to begin the intake process. All information is confidential and will be used to ensure we provide the best possible support for our residents.</p>
+    
+    <form name="intake-form" method="POST" data-netlify="true" action="/thank-you.html">
+      
+      <!-- Caseworker -->
+      <fieldset>
+        <legend>Caseworker</legend>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="isCaseworker"> I am a caseworker submitting this referral
+          </label>
+          <span class="note">Case managers: please submit client referrals here for prompt review.</span>
+        </div>
+        <div class="form-group">
+          <label for="caseworkerInfo">Caseworker Name / Agency / Phone</label>
+          <textarea id="caseworkerInfo" name="caseworkerInfo" rows="3" placeholder="Optional"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dob">Date of Birth *</label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+          <div class="form-group">
+            <label for="ssn">Last 4 digits of Social Security Number *</label>
+            <input type="text" id="ssn" name="ssn" maxlength="4" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email">
+        </div>
+      </fieldset>
+
+      <!-- Housing Category -->
+      <fieldset>
+        <legend>Housing Category</legend>
+        <div class="form-group">
+          <label>Primary Category *</label>
+          <div class="radio-group">
+            <label><input type="radio" name="category" value="veteran" required> Veteran</label>
+            <label><input type="radio" name="category" value="senior" required> Senior (55+)</label>
+            <label><input type="radio" name="category" value="homeless" required> Homeless</label>
+            <label><input type="radio" name="category" value="transitional" required> Transitional Living</label>
+            <label><input type="radio" name="category" value="other" required> Other</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Method of Income -->
+      <fieldset>
+        <legend>Method of Income</legend>
+        <div class="form-group">
+          <label for="income">Primary Source of Income *</label>
+          <select id="income" name="income" required>
+            <option value="">Select</option>
+            <option value="socialsecurity">Social Security</option>
+            <option value="disability">Disability</option>
+            <option value="employment">Employment</option>
+            <option value="sponsor">Sponsor</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- Emergency Contact -->
+      <fieldset>
+        <legend>Emergency Contact</legend>
+        <div class="form-group">
+          <label for="emergencyName">Contact Name *</label>
+          <input type="text" id="emergencyName" name="emergencyName" required>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="emergencyPhone">Phone Number *</label>
+            <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+          </div>
+          <div class="form-group">
+            <label for="relationship">Relationship *</label>
+            <input type="text" id="relationship" name="relationship" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Additional Information -->
+      <fieldset>
+        <legend>Additional Information</legend>
+        <div class="form-group">
+          <label for="specialNeeds">Special Accommodations or Medical Needs</label>
+          <textarea id="specialNeeds" name="specialNeeds" rows="4"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="mentalHealth">Mental Health Concerns</label>
+          <textarea id="mentalHealth" name="mentalHealth" rows="3"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Form Actions -->
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Submit Intake Form</button>
+        <button type="reset" class="btn-secondary">Clear Form</button>
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EverHaven Solutions | Providing compassionate independent living solutions</p>
+  </footer>
+</body>
+</html>
