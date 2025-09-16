@@ -1,9 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - EverHaven Independent Living</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Header centered */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #004080;
+      color: #fff;
+      padding: 20px;
+    }
 
-project-folder/
-├─ index.html
-├─ intake.html  ← your updated intake form
-├─ thank-you.html  ← (we’ll create this next)
-├─ maintenance.html
-├─ contact.html
-├─ style.css
-├─ logo.png
+    main {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 8px;
+      background-color: #f0f4f8;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #333;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .reference-number {
+      margin: 20px 0;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #004080;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #004080;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="EverHaven Solutions Logo" style="max-height:60px;">
+    <h1>EverHaven Independent Living</h1>
+  </header>
+
+  <main>
+    <h2>Thank You for Your Submission!</h2>
+    <p>Your intake form has been successfully received by our team.</p>
+    <p>A member of our team will review your submission and contact you within <strong>24 to 48 hours</strong>.</p>
+    <p>Please keep the reference number below for your records. You may need it for any follow-up inquiries regarding your submission.</p>
+
+    <div class="reference-number">
+      Reference Number: <span id="ref-number"></span>
+    </div>
+
+    <p>We appreciate you choosing EverHaven Independent Living and look forward to assisting you.</p>
+
+    <a href="index.html" class="button">Return to Home Page</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EverHaven Solutions | Providing compassionate independent living solutions</p>
+  </footer>
+
+  <script>
+    // Generate a random 6-digit reference number
+    const refNumber = Math.floor(100000 + Math.random() * 900000);
+    document.getElementById('ref-number').textContent = refNumber;
+  </script>
+</body>
+</html>
