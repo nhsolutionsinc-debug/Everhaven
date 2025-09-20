@@ -14,84 +14,55 @@
       background-color: #f8f9fa;
       color: #333;
     }
+
+    /* Header and Footer Styling */
     header, footer {
       background-color: #004080;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
+
+    /* Navigation Bar Styling */
     nav a {
       margin: 0 10px;
       color: #fff;
       text-decoration: none;
       font-weight: bold;
     }
+
+    /* Main Section Updated to Fill Width */
     main {
-      max-width: 800px;
+      width: 100%;
+      max-width: 1200px; /* Increase or remove this for full edge-to-edge */
       margin: 40px auto;
       background-color: #fff;
-      padding: 30px;
+      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: #004080;
-    }
-    fieldset {
+      text-align: center;
       margin-bottom: 20px;
-      border: 1px solid #ccc;
-      padding: 20px;
-      border-radius: 5px;
     }
-    legend {
-      font-weight: bold;
-      padding: 0 10px;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    input, select, textarea {
+
+    /* Responsive iframe container */
+    iframe {
       width: 100%;
-      padding: 8px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    .radio-group label {
+      min-width: 100%;
+      border: none;
       display: block;
-      margin-bottom: 5px;
-      font-weight: normal;
+      margin: 0 auto;
     }
-    .form-actions {
-      display: flex;
-      gap: 10px;
-    }
-    .btn-primary {
-      background-color: #004080;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .btn-secondary {
-      background-color: #ccc;
-      color: #333;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .note {
-      font-size: 0.9em;
-      color: #555;
-      margin-top: 5px;
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      main {
+        margin: 20px auto;
+        padding: 15px;
+      }
     }
   </style>
 </head>
@@ -110,30 +81,26 @@
   </header>
 
   <main>
+    <h2>Resident Intake Form</h2>
 
-    
-    
-    
+    <!-- Full-width, responsive Jotform iframe -->
     <iframe
-  id="JotFormIFrame-252618963585168"
-  title="EverHaven Solutions Intake Form"
-  onload="window.parent.scrollTo(0,0)"
-  allowtransparency="true"
-  allow="geolocation; microphone; camera; fullscreen; payment"
-  src="https://form.jotform.com/252618963585168"
-  frameborder="0"
-  style="width: 100%; min-width: 100%; border: none; display: block; margin: 0 auto;"
-  scrolling="no">
-</iframe>
+      id="JotFormIFrame-252618963585168"
+      title="EverHaven Solutions Intake Form"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen; payment"
+      src="https://form.jotform.com/252618963585168"
+      scrolling="no">
+    </iframe>
 
-<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-<script>
-  window.jotformEmbedHandler("iframe[id='JotFormIFrame-252618963585168']", "https://form.jotform.com/");
-</script>
-    
-    
-      
-     
+    <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+    <script>
+      window.jotformEmbedHandler(
+        "iframe[id='JotFormIFrame-252618963585168']",
+        "https://form.jotform.com/"
+      );
+    </script>
   </main>
 
   <footer>
