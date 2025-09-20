@@ -23,9 +23,12 @@
 
   <main>
     <h2>Contact EverHaven Solutions</h2>
-    <p class="contact-intro">We're here to help. Whether you're a caseworker seeking housing solutions for your clients or a potential resident, we're ready to assist you.</p>
+    <p class="contact-intro">
+      We're here to help. Whether you're a caseworker seeking housing solutions for your clients or a potential resident, we're ready to assist you.
+    </p>
 
     <div class="contact-container">
+      <!-- Contact Info Section -->
       <section class="contact-info">
         <h3>Get in Touch</h3>
         
@@ -59,9 +62,13 @@
         </div>
       </section>
 
+      <!-- Updated Contact Form Section -->
       <section class="contact-form-section">
         <h3>Send Us a Message</h3>
-        <form class="contact-form" action="#" method="POST">
+        <form name="contact-form" class="contact-form" method="POST" data-netlify="true" action="/thankyou.html">
+          <!-- Hidden input so Netlify recognizes this form -->
+          <input type="hidden" name="form-name" value="contact-form">
+
           <div class="form-group">
             <label for="contactName">Your Name *</label>
             <input type="text" id="contactName" name="contactName" required>
@@ -105,6 +112,7 @@
       </section>
     </div>
 
+    <!-- Caseworker Information -->
     <section class="for-caseworkers">
       <h3>For Caseworkers & Social Workers</h3>
       <div class="caseworker-info">
@@ -127,6 +135,7 @@
       </div>
     </section>
 
+    <!-- Emergency Contact Info -->
     <section class="emergency-contact">
       <h3>Emergency Contact Information</h3>
       <div class="emergency-info">
